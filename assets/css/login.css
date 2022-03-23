@@ -1,0 +1,46 @@
+*{
+	box-sizing: border-box;
+}
+body{
+	margin: 0;
+	overflow: hidden;
+	background-color: #e6ebe9;
+}
+.container{
+	margin: 10vh 10vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.container form{
+	background-color: #243c40;
+	padding: 10vh 10vw;
+	display: flex;
+	flex-direction: column;
+	border-radius: 10px;
+}
+.container h3{
+	font-size: 2rem;
+	color: white;
+}
+.container span{
+	color: red;
+	font-size: 1.1rem;
+	letter-spacing: 0.1rem;
+}
+.container input{
+	padding: 0.5rem 0.5rem;
+	color: black;
+	font-size: 1.2rem;
+	margin-top: 0.5rem;
+}
+.container button{
+	margin-top: 1rem;
+	cursor: pointer;
+	color: #211e1c;
+	border-radius: 5px;
+	padding: 0.3rem;
+	font-size: 1rem;
+	font-weight: 600;
+}
+

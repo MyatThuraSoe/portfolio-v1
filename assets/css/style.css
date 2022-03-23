@@ -1,0 +1,633 @@
+/*@import url('https://fonts.googleapis.com/css2?family=Acme&family=Ultra&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Amaranth:ital,wght@1,700&family=Ultra&display=swap');*/
+@import url('https://fonts.googleapis.com/css2?family=Chewy&display=swap');
+*{
+	box-sizing: border-box;
+}
+body{
+	margin: 0 auto;
+	max-width: 100%;
+	font-family: sans-serif;
+
+	position: relative;
+}
+a{
+	text-decoration: none;
+}
+.nav{
+	height: 10vh;
+	width: 100%;
+	background-color: #303030;
+
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	padding: 0 10vw;
+
+	position: fixed;
+	top: 0;
+	z-index: 2;
+}
+.nickname{
+	float: left;
+}
+.nickname img{
+	width: 8vw;
+	height: 5vh;
+}
+/*.nav .nickname a{
+	text-decoration: none;
+	color: white;
+	font-size: 1.5rem;
+	font-weight: 600;
+	letter-spacing: 0.2rem;
+}*/
+/*.nav .menu{
+	background-color: gray;
+}*/
+.menu-container{
+	height: 100%;
+	
+}
+.menu{
+	height: 100%;
+
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.menu span{
+	margin: 0 1vw;
+	/*width: 4.5vw;*/
+}
+.menu span a{
+	text-decoration: none;
+	color: white;
+
+	font-size: 1.2rem;
+	font-weight: 500;
+}
+.menu span a:hover{
+	text-shadow: 1px -2px 5px whitesmoke;
+	font-weight: 600;
+}
+
+.menu-button{
+	display: none;
+	margin-top: 1vh;
+	transform: rotate(90deg);
+}
+.menu-button:hover{
+	cursor: pointer;
+}
+.menu-button.rotate{
+	margin-top: 0vh;
+	transform: rotate(0deg);
+	transition: all 0.5s;
+}
+.menu-button.rerotate{
+	margin-top: 1vh;
+	transform: rotate(90deg);
+	transition: all 0.5s;
+}
+.menu-button img{
+	margin-top: 2vh;
+	height: 6vh;
+	width: 8vw;
+}
+.menu-verticle-container{
+	z-index: 1;
+
+	position: absolute;
+	top: 10vh;
+	right: 0;
+	
+	display: none;
+	overflow: hidden;
+	transition: all 0.5s;
+}
+.menu-verticle{
+	background-color: black;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	border-bottom-left-radius: 10px;
+	padding: 2vh 5vw 10vh 5vw;
+	width: 50vw;
+	
+	transform: translateY(-100%);
+}
+.menu-verticle.menuon{
+	transform: translateY(0);
+	transition: all 0.5s;
+}
+.menu-verticle.menuout{
+	transform: translateY(-100%);
+	transition: all 0.5s;
+}
+.menu-verticle span{
+	padding-top: 3vh;
+	padding-bottom: 2vh;
+	border-bottom: 1px solid gray;
+	width: 30vw;
+	text-align: center;
+}
+.menu-verticle span a{
+	color: white;
+
+	font-size: 1.2rem;
+	font-weight: 500;
+
+}
+.menu-verticle span a:hover{
+	text-shadow: 1px -2px 5px whitesmoke;
+	font-weight: 600;
+}
+/*---------------------------------home-----------------------------------------*/
+.home{
+	min-height: 100vh;
+	width: 100%;
+	background-color: #243c40;
+
+	padding: 10vh;
+
+}
+.profile-container{
+	width: 50%;
+	height: 80vh;
+	float: right;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.profile-container img{
+	height: 25vw;
+	width: 25vw;
+
+	border-radius: 50%;
+	border: 5px solid #111714;
+}
+.intro-text-container{
+	width: 50%;
+	height: 80vh;
+
+	color: #e8f6fa; /*#def3fa;*/	/*#a7d8e8;	*/	 /*#F5FFFA;*/
+	font-family: 'Chewy', sans-serif;
+	letter-spacing: 0.15rem;
+
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+
+	font-size: 1.5rem;
+}
+#myname, #webdeveloper{
+	color: #f0f5ed;
+	font-size: 1.5em;
+}
+/*-----------------------------------about--------------------*/
+.about{
+	min-height: 100vh;
+	width: 100%;
+
+
+	padding: 15vh 10vw 10vh 10vw;
+	/*background-color: #324457;*/
+	color: white;
+	background-color: #dce6f5;
+}
+.about hr{
+	width: 50vw;
+	margin-top: 5vh;
+}
+.about .about-text-container{
+/*	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;*/
+	height: 100%;
+
+	font-size: 1.5rem;
+	letter-spacing: 0.1rem;
+	padding: 10vh 10vw;
+	background-color: #4d6e6d;
+	border-radius: 10px;
+
+}
+.about-text-container h2{
+	text-align: center;
+}
+.about-text-container p{
+	text-align: center;
+}
+
+/*----------------------------------------skills---------------------------*/
+.skills{
+	height: 100vh;
+	width: 100%;
+	background-color: #4d6e6d;/*#f3f7ba;*/	/*#67768f;	*/			/*#f3f7ba;*/
+
+	padding: 15vh 10vw 10vh 10vw;
+}
+
+.skills-container h2{
+	font-size: 2rem;
+	/*color: #f3f7ba; 	*/
+	color: floralwhite;				/*#4f4f49;*/
+}
+.skill-icons-container{	
+	display: grid;
+	grid-template-columns: auto auto auto auto;
+	grid-row-gap: 3vh;
+	grid-column-gap: 3vw;
+
+}
+
+.skill img{
+	height: 7vw;
+	width: 7vw;
+}
+.skillani{
+	animation: skillimg 1s ease-in-out;
+	
+}
+
+
+@keyframes skillimg{
+	0%{
+		transform: scale(0);
+	}
+	100%{
+		transform: scale(1);
+	}
+
+}
+.skillanioff{
+	animation: skillannioff 1s ease-in;
+}
+@keyframes skillannioff{
+	0%{
+		transform: scale(1);
+	}
+	100%{
+		transform: scale(0);
+	}
+
+}
+
+.dev-tools{
+	/*background-color: grey;*/
+	margin-top: 10vh;
+
+}
+.dev-tools fieldset{
+	border: 2px solid floralwhite;
+}
+.dev-tools legend{
+	font-size: 1.5rem;
+	color: floralwhite;
+}
+.dev-tools ul{
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+}
+.dev-tools ul li{
+	list-style: none;
+	font-size: 1.2rem;
+	font-weight: 600;
+	color: white;
+}
+.services{
+	background-color: white;
+	width: 100%;
+	height: 100vh;
+}
+/*------------------------------------------------CONTACT-------------------------------*/
+.contact{
+	min-height: 110vh;
+	background-color: white;/*#a8e0df;*/
+	padding: 10vh 5vw 3vh 5vw;
+	color: #032b2a;
+}
+
+
+.contact-head{
+	width: 100%;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding-bottom: 1vh;
+}
+.contact-head h3{
+	font-size: 2rem;
+	padding: 0.25rem 1rem;
+	border-radius: 10px;
+}
+
+.contact-icons img{
+	height: 2rem;
+	width: 2rem;
+	margin: 0 1vw 0 1vw;
+}
+.contact img:hover{
+	cursor: pointer;
+	transform: scale(0.9);
+}
+
+.contact-left{
+	float: left;
+	width: 50%;
+	padding: 10vh 5vw 5vw 0;
+}
+.contact-left-container{
+	margin-left: 10vw;
+}
+.contact-left-container div{
+	display: flex;
+	align-items: center;
+
+	letter-spacing: 0.05rem;
+	font-weight: 600;
+	font-size: 1.5rem;
+}
+.contact-left-container div img{
+	height: 2rem;
+	width: 2rem;
+}
+.contact-right{
+	float: right;
+	width: 50%;
+	padding: 1vh 10vw;
+	color: white;
+}
+.contact-right-container{
+	padding: 1vh 3vw 5vh 3vw;
+	background-color: #4d6e6d;
+	border-radius: 10px;
+	box-shadow: 3px 3px #888888;
+}
+.contact-right-container h3{
+	text-align: center;
+	font-size: 1.6rem;
+}
+
+.contact-right-container form label{
+	display: block;
+	font-size: 1.2rem;
+	display: block;
+	margin-top: 1.3vh;
+	margin-bottom: 0.8vh;
+}
+.contact-right-container form input, .contact-right-container form textarea{
+	width: 100%;
+	font-size: 1.1rem;
+	border: 0px;
+	border-radius: 10px;
+	padding: 0.5rem;
+}
+#feedbackmessage{
+	height: 15vh;
+}
+.contact-right-container form button{
+	width: 100%;
+	margin-top: 1.5vh;
+
+	font-size: 1.1rem;
+	border: 0;
+	border-radius: 10px;
+	color: #4d6e6d;
+	font-weight: 600;
+}
+.contact-right-container form button:hover{
+	cursor: pointer;
+	transform: scale(0.98);
+	background-color: #4d6e6d;
+	color: white;
+	box-shadow: 0px 3px #888888;
+	transform: scale(0.9);
+}
+/*---------------------------------footer---------------------------*/
+.footer{
+	background-color: black;
+	color: white;
+	text-align: center;
+
+	padding: 2vh 0vw;
+}
+/*--------------------scroll bar------------------------------------*/
+::-webkit-scrollbar{
+	width: 1vh;
+	background-color: black;
+
+}
+::-webkit-scrollbar-thumb{
+	/*background-image: linear-gradient(to top,white);*/
+	/*background-image: linear-gradient(to top,#243c40,#58a7d1);*/
+	border-radius: 3px;
+	background: linear-gradient(to bottom,white,#243c40,#324457,#f3f7ba);
+}
+
+::-webkit-scrollbar-track {
+  /*background: linear-gradient(to bottom,#243c40,#324457,#f3f7ba);*/
+  background: white;
+}
+::-webkit-scrollbar:hover{
+	width: 1.5vh;
+	background-color: black;
+
+}
+
+@media (max-width: 800px){
+	.nickname img{
+		width: 15vw;
+	}
+	/*---------------home----------------------*/
+	.profile-container{
+		width: 100%;
+		height: 40vh;
+	}
+	.profile-container img{
+		width: 30vw;
+		height: 30vw;
+	}
+	.intro-text-container{
+		width: 100%;
+		height: 40vh;
+
+		font-size: 1.2rem;
+	}
+	/*--------------------about----------------*/
+	.about{
+		padding: 15vh 7vw 10vh 7vw;
+	}
+	.about-text-container{
+		font-size: 1.2rem;
+		padding: 0 5vw;
+	}
+	.about-text-container h2{
+		font-size: 2rem;
+	}
+	.about-text-container p{
+		font-size: 1.3rem;
+		padding: 0;
+	}
+	/*--------------skills------------------*/
+	.skill img{
+		height: 10vw;
+		width: 10vw;
+	}
+	.dev-tools legend{
+		font-size: 1.3rem;
+	}
+	.dev-tools ul li{
+		font-size: 1.2rem;
+	}
+	/*---------------------contact------------*/
+
+	.contact-head h3{
+		font-size: 1.8rem;
+		padding: 0.2rem 1rem;
+	}
+	.contact-icons img{
+		height: 1.9rem;
+		width: 1.9rem;
+	}
+	.contact-left{
+		float: unset;
+		width: 100%;
+	}
+	.contact-right{
+		float: unset;
+		width: 100%;
+	}
+	.contact-left-container div{
+		font-size: 1.25rem;
+	}
+	.contact-left-container div img{
+		height: 1.9rem;
+		width: 1.9rem;
+	}
+	.contact-right-container h3{
+		font-size: 1.4rem;
+	}
+
+	.contact-right-container form label{
+		font-size: 1.1rem;
+	}
+	.contact-right-container form input, .contact-right-container form textarea{
+		font-size: 1.05rem;
+	}
+	.contact-right-container form button{
+		font-size: 1.1rem;
+	}
+	
+}
+@media (max-width: 400px){
+	.nickname img{
+		width: 20vw;
+	}
+	.home{
+		padding: 10vh 7vh;
+	}
+	.profile-container img{
+		width: 45vw;
+		height: 45vw;
+	}
+	.intro-text-container{
+		font-size: 1rem;
+	}
+	/*--------------------about----------------*/
+	.about{
+		padding: 20vh 2vw 5vh 2vw;
+	}
+	.about .about-text-container{
+		padding: 5vh 6vw;
+	}
+	.about-text-container h2{
+		font-size: 1.5rem;
+
+	}
+	.about-text-container p{
+		font-size: 1.2rem;
+		padding: 0;
+	}
+	/*--------------skills------------------*/
+	.skill-icons-container{
+		grid-template-columns: auto auto auto;
+		grid-row-gap: 3vh;
+		grid-column-gap: 3vw;
+	}
+	.skill img{
+		height: 15vw;
+		width: 15vw;
+	}
+	.dev-tools ul{
+		justify-content: space-evenly;
+	}
+	.dev-tools legend{
+		font-size: 1.2rem;
+	}
+	.dev-tools ul li{
+		font-size: 0.9rem;
+		margin: 0 1vw;
+	}
+	/*------------contact----------------*/
+	.contact-head h3{
+		font-size: 1.7rem;
+		padding: 0.15rem 1rem;
+	}
+	.contact-icons img{
+		height: 1.75rem;
+		width: 1.75rem;
+	}
+	
+	.contact-left-container div{
+		font-size: 1rem;
+	}
+	.contact-left-container div img{
+		height: 1.75rem;
+		width: 1.75rem;
+	}
+	.contact-right-container h3{
+		font-size: 1.2rem;
+	}
+
+	.contact-right-container form label{
+		font-size: 1.05rem;
+	}
+	.contact-right-container form input, .contact-right-container form textarea{
+		font-size: 1rem;
+	}
+	.contact-right-container form button{
+		font-size: 1.05rem;
+	}
+	.footer{
+		font-size: 0.7rem;
+		padding: 1vh 0vw;
+	}
+	
+}
+@media (max-width: 650px){
+	.menu{
+		display: none;
+	}
+	.menu-button{
+		display: block;
+	}
+	.menu-verticle-container{
+		display: block;
+	}
+	
+}
+/*@media (max-width: 500px){
+	.intro-text-container{
+		font-size: 1.1rem;
+	}
+}*/

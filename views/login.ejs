@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="css/login.css">
+</head>
+
+<body>
+    <div class="container" id="container">
+        <form class="form" method="POST" action="/insights">
+            <h3>Enter secret code to login insight page</h3>
+            <span>
+                <% if (locals.query) { %>
+                    <%= locals.query.msg %>
+                        <% } %>
+            </span>
+            <input type="text" name="password" id="password" class="password" placeholder="Enter password...">
+            <button type="submit">Enter</button>
+        </form>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="js/login.js"></script>
+</body>
+
+</html>

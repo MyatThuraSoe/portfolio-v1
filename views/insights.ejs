@@ -1,0 +1,149 @@
+<%- include('include/insight-header') %>
+
+    <div class="container">
+        <h2 class="heading">Portfolio Page View Details</h2>
+        <div class="table">
+            <div class="table-heading">
+                <div id="head-no">
+                    No
+                </div>
+                <div id="head-ip">
+                    Remote Ip
+                </div>
+                <div id="head-time">
+                    Time
+                </div>
+                <div id="head-session">
+                    Session ID
+                </div>
+                <div id="head-nickname">
+                    Ip Nickname
+                </div>
+            </div>
+            <div class="table-data">
+                <% for(var i=0; i < viewscollection.length; i++) { %>
+                    <div class="row">
+                        <div class="data-no">
+                            <%= i+1 %>
+                        </div>
+                        <div class="row-data">
+                            <div class="top-line">
+                                <div class="data-ip">
+                                    <%= viewscollection[i].ip %>
+                                </div>
+                                <div class="data-time">
+                                    <%= viewscollection[i].visittime %>
+                                </div>
+                                <div class="data-session">
+                                    <%= viewscollection[i].session %>
+                                </div>
+                                <div class="data-nickname">
+                                    <%= viewscollection[i].ipnickname %>
+                                </div>
+                            </div>
+                            <% if (viewscollection[i].views) { %>
+                                <div class="bottom-line">
+                                    <div class="data-container">
+                                        <div class="page">
+                                            Home
+                                        </div>
+                                        <div class="page-details">
+                                            <div>
+                                                <%= viewscollection[i].views.home.views %> view
+                                            </div>
+                                            <div>
+                                                <%= viewscollection[i].views.home.duration %> s
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="data-container">
+                                        <div class="page">
+                                            About
+                                        </div>
+                                        <div class="page-details">
+                                            <div>
+                                                <%= viewscollection[i].views.about.views %> views
+                                            </div>
+                                            <div>
+                                                <%= viewscollection[i].views.about.duration %> s
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="data-container">
+                                        <div class="page">
+                                            Skills
+                                        </div>
+                                        <div class="page-details">
+                                            <div>
+                                                <%= viewscollection[i].views.skills.views %> views
+                                            </div>
+                                            <div>
+                                                <%= viewscollection[i].views.skills.duration %> s
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="data-container">
+                                        <div class="page">
+                                            Contact
+                                        </div>
+                                        <div class="page-details">
+                                            <div>
+                                                <%= viewscollection[i].views.contact.views %> views
+                                            </div>
+                                            <div>
+                                                <%= viewscollection[i].views.contact.duration %> s
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <% } else{ %>
+                                    <div class="bottom-line">
+                                        <div class="data-container">
+                                            <div class="page">
+                                                Home
+                                            </div>
+                                            <div class="page-details">
+                                                <div>
+                                                    0 views</div>
+                                                <div>0 s</div>
+                                            </div>
+                                        </div>
+                                        <div class="data-container">
+                                            <div class="page">
+                                                About
+                                            </div>
+                                            <div class="page-details">
+                                                <div>0 views</div>
+                                                <div>0 s</div>
+                                            </div>
+                                        </div>
+                                        <div class="data-container">
+                                            <div class="page">
+                                                Skills
+                                            </div>
+                                            <div class="page-details">
+                                                <div>0 views</div>
+                                                <div>0 s</div>
+                                            </div>
+                                        </div>
+                                        <div class="data-container">
+                                            <div class="page">
+                                                Contact
+                                            </div>
+                                            <div class="page-details">
+                                                <div>0 views</div>
+                                                <div>0 s</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <% } %>
+                        </div>
+                    </div>
+                    <% } %>
+
+
+            </div>
+        </div>
+    </div>
+
+    <%- include('include/insight-footer') %>
