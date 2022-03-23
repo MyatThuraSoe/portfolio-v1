@@ -11,8 +11,8 @@ exports.login = (req, res) => {
     res.render('login');
 }
 exports.insights = (req, res) => {
-    if (req.header('Referer') == 'http://localhost:5000/login') {
-        axios.get('http://localhost:5000/api/views')
+    if (req.header('Referer') == 'https://myatthurasoe.herokuapp.com/login') {
+        axios.get('https://myatthurasoe.herokuapp.com/api/views')
             .then(function (response) {
                 res.render('insights', { viewscollection: response.data });
             })
@@ -20,7 +20,7 @@ exports.insights = (req, res) => {
                 res.send(err);
             })
     } else {
-        res.send(`<h3>Unauthorized access</h3><br><a href="http://localhost:5000/login">Go back</a>`);
+        res.send(`<h3>Unauthorized access</h3><br><a href="https://myatthurasoe.herokuapp.com/login">Go back</a>`);
     }
 
 

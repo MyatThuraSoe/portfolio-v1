@@ -13,7 +13,7 @@ const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
 let usertime = currenttime + ' - (' + timezone + ')';
 
 $.ajax({
-    "url": `http://localhost:5000/storefirstdata`,
+    "url": `https://myatthurasoe.herokuapp.com/storefirstdata`,
     "method": "PUT",
     "data": {
         'currenttime': usertime
@@ -69,7 +69,7 @@ contactview = Object.assign({}, viewobj);
 // }
 function updateToServer() {
     var request = {
-        "url": `http://localhost:5000/update`,
+        "url": `https://myatthurasoe.herokuapp.com/update`,
         "method": "POST",
         "data": {
             'views': {
